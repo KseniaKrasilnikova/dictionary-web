@@ -1,7 +1,1 @@
-средство для форматирования кода, которое нацелено на использование жёстко заданных правил по оформлению программ. Оно форматирует код автоматически.//
- {
-  "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "es5",
-  "arrowParens": "avoid"
-}
+{  "singleQuote": true,  "tabWidth": 2,  "trailingComma": "es5",  "arrowParens": "avoid",  "endOfLine":"auto"}
