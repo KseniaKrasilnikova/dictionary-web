@@ -15,12 +15,12 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-12 col-md-6">
             <img className="img-fluid" src={Onboarding} alt="Обложка словаря" />
           </div>
-          <div className="col text-center">
+          <div className="col-12 col-md-6 text-center">
             <img className="img-fluid" src={About} alt="Краткая информация" />
-            <Button className="" title="My Button" img={Ornament} />
+            <Button className="" title="Аудиословарь" img={Ornament} />
           </div>
         </div>
       </div>
