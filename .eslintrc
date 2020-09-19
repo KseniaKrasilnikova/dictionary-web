@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
-  "plugins": ["react", "jest", "prettier"],
-  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "plugins": ["react", "jest"],
+  "extends": ["airbnb"],
   "globals": {
     "React": true,
     "document": true,
@@ -54,6 +54,7 @@
         "eventHandlerPropPrefix": "on"
       }
     ],
+    "react/destructuring-assignment": ["warn", "never"],
     "react/jsx-indent": ["warn", 2],
     "react/jsx-key": "error",
     "react/jsx-wrap-multilines": ["warn"],
