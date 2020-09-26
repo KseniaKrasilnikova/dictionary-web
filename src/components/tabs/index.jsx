@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import About from '../../images/about_text.jpg';
+import TabModel from './TabModel.js';
 
 class Tabs extends React.Component {
   constructor(props) {
@@ -32,16 +33,9 @@ class Tabs extends React.Component {
   }
 }
 
-export class Tab {
-  constructor(title, content) {
-    this.title = title;
-    this.content = content;
-  }
-}
-
 Tabs.propTypes = {
   // проверка, что это массив, из класса Tab //
-  tabs: PropTypes.arrayOf(PropTypes.instanceOf(Tab)).isRequired,
+  tabs: PropTypes.arrayOf(PropTypes.instanceOf(TabModel)).isRequired,
 };
 
 export default Tabs;

@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader/root';
 import Button from './components/button';
-import Tabs, { Tab } from './components/tabs';
+import Tabs from './components/tabs';
 import Ornament from './images/ornament.png';
 import Onboarding from './images/onboarding_background.jpg';
 import About from './images/about_text.jpg';
 import Instruction from './images/onboarding_text.jpg';
+import TabModel from './components/tabs/TabModel';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
-    const tabs = [
-      new Tab('Предисловие', About),
-      new Tab('Как использовать', Instruction),
+    const tabsValue = [
+      new TabModel('Предисловие', About),
+      new TabModel('Как использовать', Instruction),
     ];
     return (
       <div className="container">
@@ -26,7 +22,7 @@ class App extends Component {
           </div>
           <div className="col-12 col-md-6 text-center">
             {/* компонент реакта Tabs в нем пропс tabs */}
-            <Tabs tabs={tabs} />
+            <Tabs tabs={tabsValue} />
             <Button className="" title="Аудиословарь" img={Ornament} />
           </div>
         </div>
