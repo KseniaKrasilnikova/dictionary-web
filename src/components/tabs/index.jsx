@@ -35,6 +35,7 @@ class Tabs extends React.Component {
       const activeClass = index === this.state.currentTab ? ' active' : '';
       return (
         <div className={'tab-pane' + activeClass} key={tab.title}>
+          <p className="myclass">kjli</p>
           <img className="img-fluid" src={tab.content} alt={tab.title} />
         </div>
       );
