@@ -1,0 +1,27 @@
+/* arial-regular - cyrillic */
+@font-face {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../src/fonts/Arial.woff") format("woff"),
+    url("../src/fonts/Arial.woff2") format("woff2");
+}
+/* arial-bold - cyrillic */
+@font-face {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../src/fonts/ArialBD.woff") format("woff"),
+    url("../src/fonts/ArialBd.woff2") format("woff2");
+}
+/* arial-italic - cyrillic */
+@font-face {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../src/fonts/ArialCEItalic.woff") format("woff"),
+    url("../src/fonts/ArialCEItalic.woff2") format("woff2");
+}
