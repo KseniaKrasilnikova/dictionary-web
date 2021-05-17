@@ -31,7 +31,7 @@
 /*INDEX.html*/
 .btn-outline-dark:hover {
     color: #212529;
-    background-color: #5ce8ff;
+    background-color: #0e6efd;
 }
 
 .nav-link {
@@ -59,18 +59,18 @@
 }
 
 .form-control:focus {
-    border-color: #5ce8ff;
+    border-color: #0e6efd;
     border-right: transparent;
-    box-shadow: -4px 0 0 0.25rem rgba(92,232,255,0.25);
+    box-shadow: -4px 0 0 0.25rem rgba(14,110,253,0.25);
 }
 
 .form-control:focus+button {
-    border-color: #5ce8ff;
-    box-shadow: 5px 0 0 0.25rem rgba(92,232,255,0.25);
+    border-color: #0e6efd;
+    box-shadow: 5px 0 0 0.25rem rgba(14,110,253,0.25);
 }
 
 .search-input {
-    border: 2px solid #5ce8ff;
+    border: 2px solid #0e6efd;
     border-right: none;
     border-radius: 18px;
     height: 40px;
@@ -89,7 +89,7 @@
 }
 
 .reset-btn {
-    border: 2px solid #5ce8ff;
+    border: 2px solid #0e6efd;
     border-left: none;
     border-radius: 18px;
     position: absolute;
@@ -103,7 +103,7 @@
 
 .btn-outline-primary:hover {
     background-color: rgba(248,249,250,0.8);
-    border-color: #5ce8ff;
+    border-color: #0e6efd;
 }
 
 .btn-outline-primary:focus {
@@ -171,4 +171,15 @@
 .translation-list {
     width: 300px;
     height: 500px;
+}
+
+/*DICTIONARY.html
+  translation
+  translation-card*/
+
+.translation-card {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgb(0 0 0 / 25%);
+    border-radius: 8px;
+    position: relative;
 }
