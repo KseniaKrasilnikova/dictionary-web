@@ -28,21 +28,17 @@
     border: none;
 }
 
-.mark {
-    background-color: #f5f5f5;
-}
-
 /*INDEX.html*/
 .btn-outline-dark:hover {
     color: #212529;
-    background-color: #0e6efd;
+    background-color: #fec400;
 }
 
 .nav-link {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     color: rgba(0,0,0,0.55);
-
+    font-size: 18px;
 }
 
 /*DICTIONARY.html*/
@@ -52,15 +48,6 @@
 
 /*DICTIONARY.html
   search-form*/
-
-.search-form-container {
-    margin: 20px auto 30px;
-    width: 576px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .form-control:focus {
     border-color: #0e6efd;
@@ -80,10 +67,6 @@
     height: 40px;
     padding-left: 24px;
     padding-right: 24px;
-}
-
-.search-input-container {
-    width: 343px;
 }
 
 .search-input-reset-btn {
@@ -151,14 +134,6 @@
 }
 
 /*DICTIONARY.html
-  search-form
-  language choice*/
-
-.form-select--lang {
-    width: 142px;
-}
-
-/*DICTIONARY.html
   translation*/
 
 .translation-container {
@@ -181,33 +156,8 @@
   translation
   translation-card*/
 
-.translation-card {
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.25);
-    border-radius: 8px;
-    position: relative;
-}
-
-.card-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.card-title {
-    margin: 0;
-}
-
-.card-pronounce:before {
-    content: "";
+.sound-on {
     display: block;
-    background-image: url("../images/audio-speaker-on.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 30px;
     height: 30px;
-
-}
-
-.card-lang {
-    margin: 0;
 }
