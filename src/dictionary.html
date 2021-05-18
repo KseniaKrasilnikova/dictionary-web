@@ -35,17 +35,15 @@
             <option value='ru'>Русский</option>
             <option value='en'>Английский</option>
           </select>
-          <div class='w-75 search-input-field'>
+          <div class='w-75 d-flex flex-row flex-nowrap justify-content-between'>
             <div class="w-100">
               <div class='input-group'>
-                <input type='text' class='form-control search-input' type='text' placeholder='введите слово'
+                <input type='text' class='form-control ps-3 pe-3 search-input' type='text' placeholder='введите слово'
                        aria-label='поиск'>
-                <button class='btn btn-outline-primary reset-btn' type='button' id='inputGroupFileAddon04'>
+                <button class='btn btn-outline-primary border-start-0 reset-btn' type='button'>
                   <svg version='1.1' id='Capa_1' x='0' y='0' width='15' height='15' viewBox='0 0 496.096 496.096'
-                       style='enable-background:new 0 0 496.096 496.096;' xml:space='preserve'><g><g>
-              <path
-                d='M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686 L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342 c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31 l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z' />
-            </g></g>
+                       style='enable-background:new 0 0 496.096 496.096;' xml:space='preserve'>
+                    <g><g><path d='M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686 L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342 c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31 l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z'/></g></g>
                     <g></g>
                     <g></g>
                     <g></g>
@@ -60,11 +58,12 @@
                     <g></g>
                     <g></g>
                     <g></g>
-                    <g></g></svg>
+                    <g></g>
+                  </svg>
                 </button>
               </div>
             </div>
-            <button class='btn btn-warning btn-search' type='submit'>
+            <button class="btn btn-warning d-flex align-items-center align-self-center ms-1 px-3 py-0 rounded-pill" type='submit'>
               <svg class='search-icon' height='32' version='1.1' viewBox='0 0 32 32' width='32'>
                 <g fill='none' fill-rule='evenodd' id='Page-1' stroke='none' stroke-width='1'>
                   <g class='icon-color' id='icon-111-search'>
@@ -81,7 +80,7 @@
       <section class='container'>
         <div class='row'>
           <h2 class='visually-hidden'>Перевод слов</h2>
-            <div class='col translation-list'>
+            <div class='col col-3 h-100'>
               <ul class='list-unstyled fw-normal pb-1 small'>
                 <li>
                   <a class='list-group-item list-group-item-action active' href='#'>азбука</a>
