@@ -1,17 +1,19 @@
 import $ from 'jquery';
-import { words, languages, currentLanguage } from './data';
+import { languages } from './data';
+
+export let currentLanguage = languages.NIVKH;
+export let words = null;
 
 $.getJSON('data/words.json', data => {
   words = data;
   renderWords(words, currentLanguage);
 });
 
-
 const languagesElement = $('#languages');
 
-languagesElement.on("change", () => {
+languagesElement.on('change', () => {
   currentLanguage = languages[languagesElement.val()];
-  $('#words-list-container ul').empty()
+  $('#words-list-container ul').empty();
   renderWords(words, currentLanguage);
 });
 
@@ -22,7 +24,6 @@ for (let languagesKey in languages) {
 }
 
 function renderWords(words, language) {
-  console.log(language);
   const items = [];
   words.forEach(word => {
     try {

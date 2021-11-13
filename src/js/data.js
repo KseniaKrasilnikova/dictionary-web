@@ -12,7 +12,3 @@ export const languages = {
     'title': 'Английский'
   }
 };
-
-export let currentLanguage = languages.NIVKH;
-
-export let words = null;
