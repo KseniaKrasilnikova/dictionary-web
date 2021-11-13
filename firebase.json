@@ -10,6 +10,14 @@
       {
         "source": "**",
         "destination": "/index.html"
+      },
+      {
+        "source": "/data/words.json",
+        "destination": "/data/words.json"
+      },
+      {
+        "source": "/data/audio/*.mp3",
+        "destination": "/data/audio"
       }
     ]
   }
