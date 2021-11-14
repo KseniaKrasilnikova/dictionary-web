@@ -1,12 +1,14 @@
 import $ from 'jquery';
 import { languages } from './data';
 
-export let currentLanguage = languages.NIVKH;
-export let words = null;
+let currentLanguage = languages.NIVKH;
+let words = null;
+let currentWord = null;
 
 $.getJSON('data/words.json', data => {
   words = data;
-  renderWords(words, currentLanguage);
+  currentWord = words[0];
+  renderWords(words, currentLanguage, currentWord);
 });
 
 const languagesElement = $('#languages');
@@ -14,7 +16,7 @@ const languagesElement = $('#languages');
 languagesElement.on('change', () => {
   currentLanguage = languages[languagesElement.val()];
   $('#words-list-container ul').empty();
-  renderWords(words, currentLanguage);
+  renderWords(words, currentLanguage, currentWord);
 });
 
 for (let languagesKey in languages) {
@@ -23,15 +25,24 @@ for (let languagesKey in languages) {
   languagesElement.append('<option' + selected + ' value=\'' + languagesKey + '\'>' + language.title + '</option>');
 }
 
-function renderWords(words, language) {
+function renderWords(words, language, currentWord) {
   const items = [];
   words.forEach(word => {
     try {
-      items.push('<li id=\'' + word.id + '\'><a class=\'list-group-item list-group-item-action\' href=\'#\'>' + word.locales[language.code].value + '</a></li>');
+      const active = currentWord === word ? 'active' : '';
+      items.push(`<li value='${word.id}'><a class='list-group-item list-group-item-action ${active}'>${word.locales[language.code].value}</a></li>`);
     } catch (e) {
     }
   });
 
   $('#words-list-container ul').append(items.join(''));
-  $('#words-list-container ul > li:first-child > a').addClass('active');
+  $('#words-list-container ul li').on('click', function() {
+    onWordClicked($(this));
+  });
+}
+
+function onWordClicked(element) {
+  $('#words-list-container ul li > a.active').removeClass('active');
+  element.find('a').addClass('active');
+  currentWord = words.find(word => word.id > element.val())
 }
