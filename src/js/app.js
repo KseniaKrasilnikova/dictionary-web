@@ -15,7 +15,6 @@ const languagesElement = $('#languages');
 
 languagesElement.on('change', () => {
   currentLanguage = languages[languagesElement.val()];
-  $('#words-list-container ul').empty();
   renderWords(words, currentLanguage, currentWord);
 });
 
@@ -26,6 +25,8 @@ for (let languagesKey in languages) {
 }
 
 function renderWords(words, language, currentWord) {
+  let listContainer = $('#words-list-container ul');
+  listContainer.empty();
   const items = [];
   words.forEach(word => {
     try {
@@ -35,7 +36,7 @@ function renderWords(words, language, currentWord) {
     }
   });
 
-  $('#words-list-container ul').append(items.join(''));
+  listContainer.append(items.join(''));
   $('#words-list-container ul li').on('click', function() {
     onWordClicked($(this));
   });
@@ -44,5 +45,31 @@ function renderWords(words, language, currentWord) {
 function onWordClicked(element) {
   $('#words-list-container ul li > a.active').removeClass('active');
   element.find('a').addClass('active');
-  currentWord = words.find(word => word.id > element.val())
+  currentWord = words.find(word => word.id > element.val());
 }
+
+let debounce = null;
+$('#search-input').keyup(() => {
+  let request = $('#search-input').val();
+  clearTimeout(debounce);
+  debounce = setTimeout(function() {
+    searchWords(request);
+  }, 300);
+});
+
+function searchWords(searchRequest) {
+  if (searchRequest === '') return;
+  let filteredWords = words.filter(word => {
+    try {
+      return word.locales[currentLanguage.code].value.startsWith(searchRequest);
+    } catch (e) {
+      return false;
+    }
+  });
+  renderWords(filteredWords, currentLanguage, currentWord);
+}
+
+$('#search-clear-btn').on('click', () => {
+  $('#search-input').val('');
+  renderWords(words, currentLanguage, currentWord);
+});

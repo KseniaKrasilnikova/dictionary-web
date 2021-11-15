@@ -29,15 +29,17 @@
       <h1 class='visually-hidden'>Поиск по словарю</h1>
       <section>
         <h2 class='visually-hidden'>Форма поиска</h2>
-        <form class='w-50 d-flex search-form d-flex row flex-nowrap justify-content-between align-items-center mx-auto mt-4 mb-4'>
+        <form
+          class='w-50 d-flex search-form d-flex row flex-nowrap justify-content-between align-items-center mx-auto mt-4 mb-4'>
           <select id='languages' class='form-select w-25' aria-label='Выбрать язык'>
           </select>
           <div class='w-75 d-flex flex-row flex-nowrap justify-content-between'>
             <div class='w-100'>
               <div class='input-group'>
-                <input type='text' class='form-control ps-3 pe-3 search-input' type='text' placeholder='введите слово'
+                <input id='search-input' class='form-control ps-3 pe-3 search-input' type='text'
+                       placeholder='введите слово'
                        aria-label='поиск'>
-                <button class='btn btn-outline-primary border-start-0 reset-btn' type='button'>
+                <button id='search-clear-btn' class='btn btn-outline-primary border-start-0 reset-btn' type='button'>
                   <svg version='1.1' id='Capa_1' x='0' y='0' width='15' height='15' viewBox='0 0 496.096 496.096'
                        style='enable-background:new 0 0 496.096 496.096;' xml:space='preserve'>
                     <g><g><path d='M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686 L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342 c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31 l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z'/></g></g>
@@ -60,18 +62,6 @@
                 </button>
               </div>
             </div>
-            <button class='btn btn-warning d-flex align-items-center align-self-center ms-1 px-3 py-0 rounded-pill'
-                    type='submit'>
-              <svg class='search-icon' height='32' version='1.1' viewBox='0 0 32 32' width='32'>
-                <g fill='none' fill-rule='evenodd' id='Page-1' stroke='none' stroke-width='1'>
-                  <g class='icon-color' id='icon-111-search'>
-                    <path
-                      d='M19.4271164,20.4271164 C18.0372495,21.4174803 16.3366522,22 14.5,22 C9.80557939,22 6,18.1944206 6,13.5 C6,8.80557939 9.80557939,5 14.5,5 C19.1944206,5 23,8.80557939 23,13.5 C23,15.8472103 22.0486052,17.9722103 20.5104077,19.5104077 L26.5077736,25.5077736 C26.782828,25.782828 26.7761424,26.2238576 26.5,26.5 C26.2219324,26.7780676 25.7796227,26.7796227 25.5077736,26.5077736 L19.4271164,20.4271164 L19.4271164,20.4271164 Z M14.5,21 C18.6421358,21 22,17.6421358 22,13.5 C22,9.35786417 18.6421358,6 14.5,6 C10.3578642,6 7,9.35786417 7,13.5 C7,17.6421358 10.3578642,21 14.5,21 L14.5,21 Z'
-                      id='search' />
-                  </g>
-                </g>
-              </svg>
-            </button>
           </div>
         </form>
       </section>
