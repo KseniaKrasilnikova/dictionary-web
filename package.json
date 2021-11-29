@@ -4,8 +4,11 @@
   "description": "nivch-russian-english dictionary",
   "main": "index.html",
   "scripts": {
-    "start": "",
-    "build": ""
+    "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
+    "build-dev": "gulp build-dev",
+    "build-prod": "gulp build",
+    "start": "gulp start",
+    "deploy": "firebase deploy --only hosting"
   },
   "author": "Ksenia Krasilnikova",
   "license": "ISC",
@@ -13,8 +16,25 @@
     "url": "https://github.com/KseniaKrasilnikova/dictionary-web.git"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
-    "stylelint": "^13.13.1"
+    "del": "^4.1.1",
+    "eslint": "7.32.0",
+    "gulp": "4.0.x",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "9.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "postcss": "8.3.11",
+    "posthtml-include": "^1.2.0",
+    "stylelint": "^13.13.1",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }

@@ -4,7 +4,7 @@
   <meta charset='UTF-8'>
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css' rel='stylesheet'
         integrity='sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6' crossorigin='anonymous'>
-  <link href='css/style.css' rel='stylesheet' crossorigin='anonymous'>
+  <link href='css/style.min.css' rel='stylesheet' crossorigin='anonymous'>
   <link rel='prefetch' href='fonts/ArialBD.woff2' as='font' crossorigin='anonymous'>
   <title>Русско-нивхско-английский словарь</title>
 </head>
@@ -29,18 +29,17 @@
       <h1 class='visually-hidden'>Поиск по словарю</h1>
       <section>
         <h2 class='visually-hidden'>Форма поиска</h2>
-        <form class="w-50 d-flex search-form d-flex row flex-nowrap justify-content-between align-items-center mx-auto mt-4 mb-4">
-          <select class="form-select w-25" aria-label='Выбрать язык'>
-            <option selected>Нивхский</option>
-            <option value='ru'>Русский</option>
-            <option value='en'>Английский</option>
+        <form
+          class='w-50 d-flex search-form d-flex row flex-nowrap justify-content-between align-items-center mx-auto mt-4 mb-4'>
+          <select id='languages' class='form-select w-25' aria-label='Выбрать язык'>
           </select>
           <div class='w-75 d-flex flex-row flex-nowrap justify-content-between'>
-            <div class="w-100">
+            <div class='w-100'>
               <div class='input-group'>
-                <input type='text' class='form-control ps-3 pe-3 search-input' type='text' placeholder='введите слово'
+                <input id='search-input' class='form-control ps-3 pe-3 search-input' type='text'
+                       placeholder='введите слово'
                        aria-label='поиск'>
-                <button class='btn btn-outline-primary border-start-0 reset-btn' type='button'>
+                <button id='search-clear-btn' class='btn btn-outline-primary border-start-0 reset-btn' type='button'>
                   <svg version='1.1' id='Capa_1' x='0' y='0' width='15' height='15' viewBox='0 0 496.096 496.096'
                        style='enable-background:new 0 0 496.096 496.096;' xml:space='preserve'>
                     <g><g><path d='M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686 L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342 c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31 l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z'/></g></g>
@@ -63,56 +62,44 @@
                 </button>
               </div>
             </div>
-            <button class="btn btn-warning d-flex align-items-center align-self-center ms-1 px-3 py-0 rounded-pill" type='submit'>
-              <svg class='search-icon' height='32' version='1.1' viewBox='0 0 32 32' width='32'>
-                <g fill='none' fill-rule='evenodd' id='Page-1' stroke='none' stroke-width='1'>
-                  <g class='icon-color' id='icon-111-search'>
-                    <path
-                      d='M19.4271164,20.4271164 C18.0372495,21.4174803 16.3366522,22 14.5,22 C9.80557939,22 6,18.1944206 6,13.5 C6,8.80557939 9.80557939,5 14.5,5 C19.1944206,5 23,8.80557939 23,13.5 C23,15.8472103 22.0486052,17.9722103 20.5104077,19.5104077 L26.5077736,25.5077736 C26.782828,25.782828 26.7761424,26.2238576 26.5,26.5 C26.2219324,26.7780676 25.7796227,26.7796227 25.5077736,26.5077736 L19.4271164,20.4271164 L19.4271164,20.4271164 Z M14.5,21 C18.6421358,21 22,17.6421358 22,13.5 C22,9.35786417 18.6421358,6 14.5,6 C10.3578642,6 7,9.35786417 7,13.5 C7,17.6421358 10.3578642,21 14.5,21 L14.5,21 Z'
-                      id='search' />
-                  </g>
-                </g>
-              </svg>
-            </button>
           </div>
         </form>
       </section>
       <section class='container'>
         <div class='row'>
           <h2 class='visually-hidden'>Перевод слов</h2>
-            <div class='col col-3 h-100'>
-              <ul class='list-unstyled fw-normal pb-1 small'>
-                <li>
-                  <a class='list-group-item list-group-item-action active' href='#'>азбука</a>
-                </li>
-                <li>
-                  <a class='list-group-item list-group-item-action' href='#'>азбука</a>
-                </li>
-                <li>
-                  <a class='list-group-item list-group-item-action' href='#'>азбука</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-9">
-              <div class="card shadow">
-                <div>
-                  <h3 class="card-header">азбука</h3>
-                </div>
-                <div class="card-body">
-                  <button title="Listen to Nivkh pronunciation" class="btn btn-outline-secondary btn-sm mb-3">
-                    <svg class="sound-on" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="1" id="_1"><path d="M179,388H103.35a49.27,49.27,0,0,1-49.22-49.21V237.21A49.27,49.27,0,0,1,103.35,188H179a15,15,0,0,1,15,15V373A15,15,0,0,1,179,388ZM103.35,218a19.24,19.24,0,0,0-19.22,19.21V338.79A19.24,19.24,0,0,0,103.35,358H164V218Z"/><path d="M295,452.92H245.62A81.71,81.71,0,0,1,164,371.3V204.7a81.71,81.71,0,0,1,81.62-81.62H295a15,15,0,0,1,15,15V437.92A15,15,0,0,1,295,452.92ZM245.62,153.08A51.68,51.68,0,0,0,194,204.7V371.3a51.68,51.68,0,0,0,51.62,51.62H280V153.08Z"/><path d="M358.57,351.57A15,15,0,0,1,348,326,53.73,53.73,0,0,0,348,250a15,15,0,0,1,21.22-21.22,83.79,83.79,0,0,1,0,118.36A15,15,0,0,1,358.57,351.57Z"/><path d="M404.5,397.5a15,15,0,0,1-10.61-25.61,118.77,118.77,0,0,0,0-167.78,15,15,0,0,1,21.22-21.22c57.95,58,57.95,152.26,0,210.22A15,15,0,0,1,404.5,397.5Z"/></g></svg>
-                  </button>
-                  <h4 class="card-title">ru</h4>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <h4 class="card-title">en</h4>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <div id='words-list-container' class='col col-3 h-100'>
+            <ul class='list-unstyled fw-normal pb-1 small'>
+            </ul>
+          </div>
+          <div class='col-9'>
+            <div class='card shadow'>
+              <div>
+                <h3 class='card-header'></h3>
+              </div>
+              <div class='card-body'>
+                <button id='play-word-btn' title='Listen to Nivkh pronunciation' class='btn btn-outline-secondary btn-sm mb-3'>
+                  <svg class='sound-on' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><title />
+                    <g data-name='1' id='_1'>
+                      <path
+                        d='M179,388H103.35a49.27,49.27,0,0,1-49.22-49.21V237.21A49.27,49.27,0,0,1,103.35,188H179a15,15,0,0,1,15,15V373A15,15,0,0,1,179,388ZM103.35,218a19.24,19.24,0,0,0-19.22,19.21V338.79A19.24,19.24,0,0,0,103.35,358H164V218Z' />
+                      <path
+                        d='M295,452.92H245.62A81.71,81.71,0,0,1,164,371.3V204.7a81.71,81.71,0,0,1,81.62-81.62H295a15,15,0,0,1,15,15V437.92A15,15,0,0,1,295,452.92ZM245.62,153.08A51.68,51.68,0,0,0,194,204.7V371.3a51.68,51.68,0,0,0,51.62,51.62H280V153.08Z' />
+                      <path
+                        d='M358.57,351.57A15,15,0,0,1,348,326,53.73,53.73,0,0,0,348,250a15,15,0,0,1,21.22-21.22,83.79,83.79,0,0,1,0,118.36A15,15,0,0,1,358.57,351.57Z' />
+                      <path
+                        d='M404.5,397.5a15,15,0,0,1-10.61-25.61,118.77,118.77,0,0,0,0-167.78,15,15,0,0,1,21.22-21.22c57.95,58,57.95,152.26,0,210.22A15,15,0,0,1,404.5,397.5Z' />
+                    </g>
+                  </svg>
+                </button>
               </div>
             </div>
-            </div>
+          </div>
         </div>
       </section>
     </main>
   </div>
 </div>
+<script src='js/main.js' type='text/javascript'></script>
 </body>
 </html>
