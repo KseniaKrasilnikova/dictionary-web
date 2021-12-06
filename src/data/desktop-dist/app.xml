@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Application ts="1638798806130" uri="https://dictionary-f4cbd.firebaseapp.com/data/desktop-dist/" launch="com.ncbs.dictionary.DictionaryApp">
+    <lib file="annotations.jar" checksum="4201984052" size="17536"/>
+    <lib file="controlsfx.jar" checksum="1165545135" size="1215643"/>
+    <lib file="Dictionary.jar" checksum="4149562884" size="13426732"/>
+    <lib file="javax.json-api.jar" checksum="4026910835" size="31140"/>
+    <lib file="javax.json.jar" checksum="1161332358" size="101089"/>
+    <lib file="jmetro.jar" checksum="1235155056" size="119507"/>
+    <lib file="kotlin-reflect.jar" checksum="3783557486" size="2869264"/>
+    <lib file="kotlin-stdlib-common.jar" checksum="2220058187" size="200616"/>
+    <lib file="kotlin-stdlib-jdk7.jar" checksum="389710027" size="22357"/>
+    <lib file="kotlin-stdlib-jdk8.jar" checksum="236571929" size="16201"/>
+    <lib file="kotlin-stdlib.jar" checksum="255076956" size="1508076"/>
+    <lib file="kotlinx-coroutines-core-jvm.jar" checksum="2956096150" size="1485902"/>
+    <lib file="kotlinx-coroutines-javafx.jar" checksum="573074667" size="20329"/>
+    <lib file="kotlinx-serialization-core-jvm.jar" checksum="1840973427" size="339794"/>
+    <lib file="kotlinx-serialization-json-jvm.jar" checksum="2144910846" size="212822"/>
+    <lib file="okhttp.jar" checksum="258266890" size="792081"/>
+    <lib file="okio.jar" checksum="675232142" size="243179"/>
+    <lib file="tornadofx.jar" checksum="3075097706" size="3794196"/>
+    <updateText>Updating...</updateText>
+    <updateLabelStyle>-fx-font-weight: bold;</updateLabelStyle>
+    <progressBarStyle>-fx-pref-width: 200;</progressBarStyle>
+    <wrapperStyle>-fx-spacing: 10; -fx-padding: 25;</wrapperStyle>
+    <acceptDowngrade>false</acceptDowngrade>
+    <stopOnUpdateErrors>false</stopOnUpdateErrors>
+    <lingeringUpdateScreen>false</lingeringUpdateScreen>
+</Application>

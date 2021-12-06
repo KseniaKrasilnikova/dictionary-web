@@ -18,6 +18,10 @@
       {
         "source": "/data/audio/*.mp3",
         "destination": "/data/audio"
+      },
+      {
+        "source": "/data/desktop-dist/*.@(jar|xml)",
+        "destination": "/data/desktop-dist"
       }
     ]
   }
