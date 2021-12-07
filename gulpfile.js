@@ -74,14 +74,20 @@ gulp.task('copy', () =>
     'src/fonts/**/*.{woff,woff2}',
     'src/images/**',
     'src//*.ico',
-    'src/data/**/*.*'
+    'src/data/audio/*.*',
+    'src/data/words.json',
   ], {
     base: 'src'
   })
     .pipe(gulp.dest('public')));
 
+gulp.task('copy-desktop', () =>
+  gulp.src('src/data/desktop-dist/*.*')
+    .pipe(rename({dirname: ''}))
+    .pipe(gulp.dest('public')));
+
 gulp.task('clean', () => del('public'));
 
 gulp.task('build-dev', gulp.series('clean', 'copy', 'js-develop', 'css', 'html'));
-gulp.task('build', gulp.series('clean', 'copy', 'js-production', 'css', 'html'));
+gulp.task('build', gulp.series('clean', 'copy', 'copy-desktop', 'js-production', 'css', 'html'));
 gulp.task('start', gulp.series('build', 'server'));
