@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Application ts="1638798806130" uri="https://dictionary-f4cbd.firebaseapp.com/data/desktop-dist/" launch="com.ncbs.dictionary.DictionaryApp">
+<Application ts="1638880267911" uri="https://dictionary-f4cbd.firebaseapp.com/" launch="com.ncbs.dictionary.DictionaryApp">
     <lib file="annotations.jar" checksum="4201984052" size="17536"/>
     <lib file="controlsfx.jar" checksum="1165545135" size="1215643"/>
-    <lib file="Dictionary.jar" checksum="4149562884" size="13426732"/>
+    <lib file="Dictionary.jar" checksum="2608064681" size="13426732"/>
     <lib file="javax.json-api.jar" checksum="4026910835" size="31140"/>
     <lib file="javax.json.jar" checksum="1161332358" size="101089"/>
     <lib file="jmetro.jar" checksum="1235155056" size="119507"/>
