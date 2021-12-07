@@ -106,3 +106,21 @@ $('#search-clear-btn').on('click', () => {
   $('#search-input').val('');
   renderWords(words, currentLanguage, currentWord);
 });
+
+$('#about-button').on('click', () => {
+  let linkElement = $("#about-button .nav-link");
+  if (linkElement.hasClass('active')) return;
+  linkElement.addClass('active');
+  $("#get-started-button .nav-link").removeClass('active');
+  $("#about").addClass('active');
+  $("#get-started").removeClass('active');
+});
+
+$('#get-started-button').on('click', () => {
+  let linkElement = $("#get-started-button .nav-link");
+  if (linkElement.hasClass('active')) return;
+  linkElement.addClass('active');
+  $("#about-button .nav-link").removeClass('active');
+  $("#get-started").addClass('active');
+  $("#about").removeClass('active');
+});
