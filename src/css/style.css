@@ -1,109 +1,109 @@
 /*@hoverColor: #fec400;*/
 .visually-hidden:not(:focus):not(:active) {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 1px;
-    margin: -1px;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 1px;
+  margin: -1px;
 }
 
 .menu-item {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    border-top: 3px solid #f8f9fa;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-top: 3px solid #f8f9fa;
 }
 
 .menu-item--active {
-    border-top: 3px solid #fec400;
+  border-top: 3px solid #fec400;
 }
 
 .nav-item:hover {
-    background-color: #fec400;
-    border-top: 3px solid #fec400;
+  background-color: #fec400;
+  border-top: 3px solid #fec400;
 }
 
 .nav-tabs .nav-item:hover {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 /*INDEX.html*/
 .btn-outline-dark:hover {
-    color: #212529;
-    background-color: #fec400;
+  color: #212529;
+  background-color: #fec400;
 }
 
 .nav-link {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    color: rgba(0, 0, 0, 0.55);
-    font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 18px;
 }
 
 /*DICTIONARY.html*/
 .page-main {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 /*DICTIONARY.html
   search-form*/
 
 .form-control:focus {
-    border-color: #0e6efd;
-    border-right: transparent;
-    box-shadow: -4px 0 0 0.25rem rgba(14, 110, 253, 0.25);
+  border-color: #0e6efd;
+  border-right: transparent;
+  box-shadow: -4px 0 0 0.25rem rgba(14, 110, 253, 0.25);
 }
 
 .form-control:focus + button {
-    border-color: #0e6efd;
-    box-shadow: 5px 0 0 0.25rem rgba(14, 110, 253, 0.25);
+  border-color: #0e6efd;
+  box-shadow: 5px 0 0 0.25rem rgba(14, 110, 253, 0.25);
 }
 
 .search-input {
-    border: 2px solid #0e6efd;
-    border-right: none;
+  border: 2px solid #0e6efd;
+  border-right: none;
 }
 
 .reset-btn {
-    border: 2px solid #0e6efd;
-    border-radius: 18px;
+  border: 2px solid #0e6efd;
+  border-radius: 18px;
 }
 
 .input-group input {
-    border-radius: 18px;
+  border-radius: 18px;
 }
 
 .btn-outline-primary:hover {
-    background-color: #0e6efd;
-    border-color: #0e6efd;
+  background-color: #0e6efd;
+  border-color: #0e6efd;
 }
 
 .btn-outline-primary:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .btn-outline-primary:active {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .btn-outline-secondary:hover {
-    background-color: #6c757d;
-    border-color: #6c757d;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 
 /*DICTIONARY.html
   btn-search*/
 
 .icon-color {
-    fill: #212529;
+  fill: #212529;
 }
 
 .sound-on {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 #words-list-container ul {
-    height: 600px;
-    overflow-y: auto;
+  height: 600px;
+  overflow-y: auto;
 }
