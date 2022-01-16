@@ -6,8 +6,25 @@ let words = null;
 let currentWord = null;
 
 $.getJSON('data/words.json', data => {
-  words = new Map(data.map(i => [i.id, i]));
-  currentWord = data[0];
+  words = new Map(data.map(item => [item.id, {
+    "id": item.id,
+    "locales": {
+      "ru": {
+        "language": "RUSSIAN",
+        "value": item.ru
+      },
+      "nv": {
+        "language": "NIVKH",
+        "value": item.nv,
+        "audioPath": `/audio/${item.id}.mp3`
+      },
+      "en": {
+        "language": "ENGLISH",
+        "value": item.en
+      }
+    }
+  }]));
+  currentWord = words.get(data[0].id);
   renderWords(words, currentLanguage, currentWord);
 });
 
